@@ -2,3 +2,28 @@ p{
   color: red;
   font-size: 45px;
 }
+
+.myClass{
+  color: rgb(53, 180, 48);
+  font-size: 25px;
+  font-style: italic;
+}
+
+.specialClass{
+  color: rgb(48, 149, 180);
+  font-size: 25px;
+  font-style: italic;
+}
+
+.fontClass{
+  font-size: 80px;
+}
+
+.colorClass{
+  color:rgb(255, 0, 85);
+}
+
+.myBlueClass{
+  color: rgb(88, 63, 63);
+  font-size: 55px;
+}

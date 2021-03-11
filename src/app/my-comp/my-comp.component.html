@@ -1,10 +1,21 @@
 <p>Here from my new My-compo.component</p>
-<p>Thia is the output : {{ myString }}</p>
-<p>Thiis ia a number : {{ myNUmber + 45 }}</p>
-<hr/>
-<img src="{{ myImage }}" style="width: 300px;">
-<img [src]="myImage" style="width: 300px; margin-left: 10px;">
+<div class="myClass">
+  This is a normal styles
+</div>
+<div [class]="myVar">
+  This is  from TypeSript.
+</div>
+<div [class.myClass]="isStyleActive">
+  This is  a conditional.
+</div>
+<div [class.myClass]="!isStyleActive">
+  This is  a conditional.
+</div>
+<div [class]="styleCheck">
+  This is  From TS.
+</div>
+<div [ngClass]="styleCheck">
+  This is  From TS.
+</div>
 <hr>
-<p>My Car name is :: {{  myJson.carName }} and Id :: {{ myJson.arId }}</p>
-<br>
-<button (click)="myFunc()">Click Me!</button>
+<div [class]="getClass()">This a Div with method</div>

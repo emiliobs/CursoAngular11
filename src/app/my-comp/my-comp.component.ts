@@ -6,20 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-comp.component.css']
 })
 export class MyCompComponent implements OnInit {
+myVar="myClass";
+isStyleActive: boolean = true;
+isSpecialActive: boolean =  false;
+isFontClassActive: boolean = true;
+isColorClassActive : boolean= true;
+styleCheck= {
+ specialClass: this.isSpecialActive,
+ fontClass : this.isFontClassActive,
+ colorClass : this.isColorClassActive
+};
+
+ getClass (){
+ return "myBlueClass";
+};
 
   constructor() { }
-  myString: string = "Hi Emlio from angular 11";
-  myNUmber: number = 55;
-  myImage: string = "https://2.bp.blogspot.com/-bzfT5KqVTJM/USU456rpPGI/AAAAAAAAEmE/-hbQUw7WhPQ/s1600/Fall+Street+Fashion+2013+for+Girls+(9).jpg";
-  myJson = {
-    carName: "BMW",
-    arId: 55555
-  };
 
-  myFunc(): void{
-    this.myJson.carName = "Toyota Boston",
-    this.myJson.arId = 4598
-  };
 
   ngOnInit(): void {
   }
