@@ -6,25 +6,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-comp.component.css']
 })
 export class MyCompComponent implements OnInit {
-myVar="myClass";
-isStyleActive: boolean = true;
-isSpecialActive: boolean =  false;
-isFontClassActive: boolean = true;
-isColorClassActive : boolean= true;
-styleCheck= {
- specialClass: this.isSpecialActive,
- fontClass : this.isFontClassActive,
- colorClass : this.isColorClassActive
+
+  ifError: boolean = true;
+
+  myStyle = {
+    'background-color' : "yellow",
+    'color' : "black",
+    'font-weight': 'bold',
+    'text-align' : 'center',
+    'font-size': this.ifError ?  "55px" : '5'
 };
 
- getClass (){
- return "myBlueClass";
-};
+fethMyStyle = () =>{
+  return {
+    'color' : 'red',
+    'font-weight ': 'bold',
+    'text-align' : 'center',
+    'font-size': this.ifError ?  "55px" : '5'
+  };
+}
 
-  constructor() { }
 
 
-  ngOnInit(): void {
-  }
+constructor() { }
+
+
+ngOnInit(): void {
+}
 
 }

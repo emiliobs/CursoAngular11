@@ -1,21 +1,22 @@
+
 <p>Here from my new My-compo.component</p>
-<div class="myClass">
-  This is a normal styles
+<div  [style.color]="'red'">This is Mgs</div>
+<div
+  [style.text-align]="'center'"
+  [style.color] = "'Blue'">
+  This is Mgs
 </div>
-<div [class]="myVar">
-  This is  from TypeSript.
+<div [style.color] = " ifError ? 'violet' : 'green' ">
+  This is conditional
 </div>
-<div [class.myClass]="isStyleActive">
-  This is  a conditional.
+<div [style.font-size.px] = "ifError ? '55' : '120' ">
+  This is at deeper lever.
 </div>
-<div [class.myClass]="!isStyleActive">
-  This is  a conditional.
-</div>
-<div [class]="styleCheck">
-  This is  From TS.
-</div>
-<div [ngClass]="styleCheck">
-  This is  From TS.
+<div [ngStyle]="myStyle">
+  This is from Objet!
 </div>
 <hr>
-<div [class]="getClass()">This a Div with method</div>
+<div [ngStyle]="fethMyStyle()">
+  This in from Method.!!!!
+</div>
+
