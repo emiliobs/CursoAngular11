@@ -1,22 +1,21 @@
-
-<p>Here from my new My-compo.component</p>
-<div  [style.color]="'red'">This is Mgs</div>
-<div
-  [style.text-align]="'center'"
-  [style.color] = "'Blue'">
-  This is Mgs
+<div class="container">
+  <p>Here from my new My-compo.component</p>
+  <hr>
+  <p>{{ myText }}</p>
+  <button class="btn btn-primary" (click)="changeText()">
+    Click Me Please!
+  </button>
+  <br><br><br>
+  <button class="btn btn-dark" (click)="chageEvent($event)">
+    Change Event!
+  </button>
+  <hr>
+  <input (keyup) = "onKeyPressed($event)">
+  <p>{{  myInputText }}</p>
+  <hr>
+  <button
+  class="btn btn-danger"
+   (click) = "MyText = 'Click Me Please!'">
+   {{ MyText }}
+  </button>
 </div>
-<div [style.color] = " ifError ? 'violet' : 'green' ">
-  This is conditional
-</div>
-<div [style.font-size.px] = "ifError ? '55' : '120' ">
-  This is at deeper lever.
-</div>
-<div [ngStyle]="myStyle">
-  This is from Objet!
-</div>
-<hr>
-<div [ngStyle]="fethMyStyle()">
-  This in from Method.!!!!
-</div>
-

@@ -7,26 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyCompComponent implements OnInit {
 
-  ifError: boolean = true;
+  myText: string = "Tis is my Text: Emilio";
+  myInputText : string = "";
+  MyText: string = "init";
 
-  myStyle = {
-    'background-color' : "yellow",
-    'color' : "black",
-    'font-weight': 'bold',
-    'text-align' : 'center',
-    'font-size': this.ifError ?  "55px" : '5'
-};
-
-fethMyStyle = () =>{
-  return {
-    'color' : 'red',
-    'font-weight ': 'bold',
-    'text-align' : 'center',
-    'font-size': this.ifError ?  "55px" : '5'
+  changeText = () =>
+  {
+      this.myText = "This text was changes for a new one!!!! - Amiliana";
   };
-}
 
+  chageEvent = (event:any) =>
+  {
+    console.log(event);
+    console.log(event.srcElement.innerText)
+    event.srcElement.innerText = "This has been changed";
+  };
 
+  onKeyPressed = (event:any) => {
+   this.myInputText += event.target.value + '  && ';
+  };
 
 constructor() { }
 
